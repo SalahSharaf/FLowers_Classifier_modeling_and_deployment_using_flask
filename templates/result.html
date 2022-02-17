@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Flowers Classifier</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="./static/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<div class="body-container-wrapper">
+  <div class="body-container">
+    <div class="page-center">
+      <i class="fa fa-cloud" aria-hidden="true"></i>
+	  {% if result and probability %}
+      <h1>it's a    <strong>{{result}}   Flower</strong>     with a probability of  <strong>    {{probability}}</strong></h1>
+	  {% else %}
+	  <h1>please upload an   <strong> Image </strong></h1>
+	  {% endif %}
+      </div>
+      <div class="file-upload-bar-closed"></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-container-wrapper">
+  <div class="footer-container">
+    <div class="custom-footer-bg">
+      <div class="page-center">
+        <p>@Copyright Salah Sharaf ELdeen</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.knob.js'></script>
+<script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.ui.widget.js'></script>
+<script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.iframe-transport.js'></script>
+<script src='https://demo.tutorialzine.com/2013/05/mini-ajax-file-upload-form/assets/js/jquery.fileupload.js'></script>
+<script  src="./static/script.js"></script>
+
+</body>
+</html>
