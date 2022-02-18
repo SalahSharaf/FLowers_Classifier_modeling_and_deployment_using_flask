@@ -3,4 +3,4 @@ werkzeug
 tensorflow-cpu 
 gunicorn
 opencv-python
-libgl1
+
