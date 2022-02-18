@@ -1,0 +1,8 @@
+flask
+werkzeug 
+tensorflow
+gunicorn
+numpy 
+cv2
+matplotlib
+os
