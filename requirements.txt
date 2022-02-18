@@ -1,7 +1,5 @@
 flask
-werkzeug 
+werkzeug
 tensorflow
 gunicorn
-numpy 
 opencv-python
-matplotlib
