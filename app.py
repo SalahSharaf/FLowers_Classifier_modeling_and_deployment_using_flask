@@ -1,9 +1,6 @@
 from flask import Flask,render_template,request
 from werkzeug.utils import secure_filename
 import tensorflow as tf
-import numpy as np
-import cv2 
-import matplotlib.pyplot as plt
 import os
 
 
@@ -19,7 +16,7 @@ classes=['dandelion' ,'daisy' ,'tulips' ,'sunflowers' ,'roses']
 
 
 def predict_func(image_path):
-    image=cv2.imread(image_path,cv2.IMREAD_UNCHANGED)   
+    image=tf.keras.utils.load_img(image_path)   
     image = tf.image.resize(image, (IMAGE_RES, IMAGE_RES))/255.0
     print(image.shape)
     prediction=model.predict(image[None ,...])
