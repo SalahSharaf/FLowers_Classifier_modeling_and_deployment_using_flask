@@ -3,4 +3,5 @@ werkzeug
 tensorflow-cpu 
 gunicorn
 opencv-python
+opencv-python-headless
 
