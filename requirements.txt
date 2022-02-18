@@ -3,6 +3,6 @@ werkzeug
 tensorflow
 gunicorn
 numpy 
-cv2
+opencv-python
 matplotlib
 os
