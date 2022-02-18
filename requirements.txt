@@ -3,3 +3,4 @@ werkzeug
 tensorflow-cpu 
 gunicorn
 numpy
+Pillow

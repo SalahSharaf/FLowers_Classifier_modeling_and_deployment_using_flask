@@ -3,7 +3,7 @@ from werkzeug.utils import secure_filename
 import tensorflow as tf
 import os
 import numpy as np
-
+import PIL
 
 app=Flask(__name__)
 
@@ -17,7 +17,8 @@ classes=['dandelion' ,'daisy' ,'tulips' ,'sunflowers' ,'roses']
 
 
 def predict_func(image_path):
-    image=tf.keras.utils.load_img(image_path)   
+    image=PIL.Image.open(image_path)  
+    image.load()
     image = tf.image.resize(image, (IMAGE_RES, IMAGE_RES))/255.0
     print(image.shape)
     prediction=model.predict(image[None ,...])
@@ -54,6 +55,6 @@ def upload_file():
 
   
 if __name__=='__main__':
-    app.run(host='127.0.0.1',port=5000)
+    app.run(host='127.0.0.1',port=5000,debug=True)
 
 
